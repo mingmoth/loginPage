@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
 const exphbs = require('express-handlebars')
+
+
 const mongoose = require('mongoose')
 mongoose.connect('mongodb://localhost/login', { useNewUrlParser: true, useUnifiedTopology: true })
 
@@ -17,7 +19,11 @@ app.set('view engine', 'hbs')
 
 
 app.get('/', (req, res) => {
-  res.render('index')
+  res.render('login')
+})
+
+app.get('/', (req, res) => {
+
 })
 
 app.listen(3000, () => {
