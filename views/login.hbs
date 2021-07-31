@@ -5,6 +5,13 @@
         <h1>Account Login</h1>
       </div>
       <div class="d-flex flex-column align-items-center">
+        <div class="col-sm-5 ">
+          {{#if msg}}
+          <div class="alert alert-warning" role="alert">{{msg}}</div>
+          {{/if}}
+        </div>
+      </div>
+      <div class="d-flex flex-column align-items-center">
         <div class="col-sm-3 ">
           <input type="text" class="form-control form-control-sm mt-3" placeholder="Email" name="email" id="email"
             required>
@@ -14,6 +21,7 @@
           <div class="invalid-feedback">Please enter your password</div>
         </div>
       </div>
+      
       <div class="container d-flex justify-content-center mt-3">
         <button type="submit" class="btn btn-outline-warning m-2">Login</button>
       </div>
