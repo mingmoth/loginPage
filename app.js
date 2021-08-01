@@ -46,7 +46,7 @@ app.get('/', (req, res) => {
 app.post('/login', (req, res) => {
   const { email, password } = req.body
   const msg = 'Username or Password is invalid'
-  ind({ email, password })
+  User.find({ email, password })
     .lean()
     .then((users) => {
       if (users.length === 1) {
