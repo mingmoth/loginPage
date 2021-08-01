@@ -10,20 +10,18 @@
           <input type="text" class="form-control form-control-sm mt-3" placeholder="Email" name="email" id="email"
             required>
           <div class="invalid-feedback">Please enter your email</div>
-          <input type="text" class="form-control form-control-sm mt-3" placeholder="password" name="password"
+          <input type="password" class="form-control form-control-sm mt-3" placeholder="password" name="password"
             id="password" required>
           <div class="invalid-feedback">Please enter your password</div>
+          <div class="d-flex justify-content-center">
+            {{#if msg}}
+            <a class="alert alert-warning p-0 mt-2 mb-0" role="alert">{{msg}}</a>
+            {{/if}}
+          </div>
         </div>
       </div>
-      <div class="d-flex flex-column align-items-center">
-        <div class="col-sm-3">
+      <div class="container d-flex justify-content-center mt-2">
 
-        </div>
-      </div>
-      <div class="container d-flex justify-content-center mt-3">
-        {{#if msg}}
-        <a class="alert alert-warning p-0 m-2" role="alert">{{msg}}</a>
-        {{/if}}
         <button type="submit" class="btn btn-outline-warning m-2">Login</button>
       </div>
     </div>
